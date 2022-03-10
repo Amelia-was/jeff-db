@@ -1,7 +1,10 @@
+const { User, Paper } = require('../models');
+
 const resolvers = {
     Query: {
-        helloWorld: () => {
-            return 'Hello world!';
+        papers: async (parent, { email }) => {
+            const params = email ? { email } : {};
+            return Paper.find(params).sort({ order: 1 });
         }
     }
 };

@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const paperSchema = new Schema(
+const linkSchema = new Schema(
     {
         title: {
             type: String,

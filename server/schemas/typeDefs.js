@@ -19,7 +19,7 @@ const typeDefs = gql`
     abstract: String
     citation: String
     links: [Link]
-    order: Number
+    order: Int
   }
 
   type Link {
@@ -29,7 +29,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    papers: [Paper]
+    papers(email: String): [Paper]
 }
 `;
 

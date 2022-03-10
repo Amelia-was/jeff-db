@@ -36,7 +36,10 @@ const paperSchema = new Schema(
         ],
         order: {
             type: Number,
-            required: true
+            required: true,
+            unique: true,
+            default: 1,
+            min: 1
         }
     },
     {
