@@ -24,16 +24,16 @@ const paperSchema = new Schema(
         citation: {
             type: String
         },
-        links: {
-            type: String,
-            required: 'You need to leave a thought!',
-            minlength: 1,
-            maxlength: 280
-        },
         email: {
             type: String,
             required: true
-        }
+        },
+        links: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Link'
+            }
+        ]
     },
     {
         toJSON: {

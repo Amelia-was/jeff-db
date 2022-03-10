@@ -10,5 +10,14 @@ const paperSchema = new Schema(
             type: String,
             reuqired: 'Please enter a URL'
         }
+    },
+    {
+        toJSON: {
+            getters: true
+        }
     }
-)
+);
+
+const Link = model('Link', linkSchema);
+
+module.exports = Link;
